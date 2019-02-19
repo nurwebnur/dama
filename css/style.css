@@ -1,0 +1,260 @@
+@import url("opensans-bold.css");
+
+/*
+font-family: 'OpenSans-Bold';
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0 !important;
+}
+
+section,
+div {
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+label {
+    cursor: pointer;
+}
+
+ins {
+    text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+    font-family: "OpenSans-Regular";
+    font-size: 14px;
+    color: #737272;
+}
+::-moz-placeholder {
+    font-family: "OpenSans-Regular";
+    font-size: 14px;
+    color: #737272;
+}
+:-ms-input-placeholder {
+    font-family: "OpenSans-Regular";
+    font-size: 14px;
+    color: #737272;
+}
+:-moz-placeholder {
+    font-family: "OpenSans-Regular";
+    font-size: 14px;
+    color: #737272;
+}
+
+*:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+*:focus::-moz-placeholder {
+    color: transparent;
+}
+*:focus:-ms-input-placeholder {
+    color: transparent;
+}
+*:focus:-moz-placeholder {
+    color: transparent;
+}
+
+/* ############################################################# */
+
+body {
+    height: 5100px;
+    background: url("../img/bg.jpg") no-repeat center top;
+    font-family: "OpenSans-Bold";
+    color: #272727;
+}
+
+.center {
+    width: 1174px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #141414;
+    padding: 15px 0;
+}
+
+.header .center {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav {
+    margin-left: 125px;
+}
+
+.header .nav a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 60px;
+    transition: 0.3s;
+}
+
+.header .nav a:hover {
+    color: #f6c615;
+}
+
+.main_slider {
+    margin-top: 128px;
+    /* position: relative; ----------------------------------*/
+}
+
+.main_slider ul {
+    height: 763px;
+    position: relative;
+}
+
+.main_slider ul li {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+}
+
+.main_slider ul li.active {
+    opacity: 1;
+}
+
+.main_slider_text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-top: 55px;
+}
+
+.main_slider_title {
+    font-size: 125px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.main_slider_desc {
+    font-size: 18.75px;
+    color: #fff;
+}
+
+.main_slider_price {
+    font-size: 18.75px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.main_slider_btn {
+    font-size: 14.58px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 46px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 12px 18px 14px 0;
+    width: 149px;
+    position: relative;
+}
+
+.main_slider_btn i {
+    position: absolute;
+    right: -26px;
+    top: -2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url("../img/cart.png") no-repeat center #f5c617;
+    box-shadow: 0 0 0 5px rgba(245, 198, 23, 0.3);
+}
+
+.main_slider_controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 104px;
+}
+
+.main_slider_controls_count {
+    padding-bottom: 94px;
+}
+
+.main_slider_controls_count span {
+    font-size: 66.67px;
+}
+
+.main_slider_controls_count ins {
+    font-size: 16.67px;
+}
+
+.main_slider_controls_pags {
+    padding-left: 50px;
+    padding-bottom: 73px;
+}
+
+.main_slider_controls_pags span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #252525;
+    margin-bottom: 10px;
+}
+
+.main_slider_controls_pags span.active {
+    background: #bdbdbd;
+}
+
+.main_slider_controls_btns {
+    height: 84px;
+    padding-left: 24px;
+}
+
+.main_slider_controls_btns button {
+    width: 21px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.main_slider_controls_btns button.prev {
+    border-top: 1px solid #252525;
+    border-left: 1px solid #252525;
+    transform: rotate(-45deg);
+}
+
+.main_slider_controls_btns button.next {
+    border-top: 1px solid #252525;
+    border-right: 1px solid #252525;
+    transform: rotate(45deg);
+    margin-top: 58px;
+}
+
+.main_slider_controls_btns::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 39px;
+    width: 90px;
+    height: 1px;
+    background: #252525;
+    transform: rotate(-45deg);
+}
