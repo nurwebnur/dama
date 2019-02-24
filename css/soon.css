@@ -81,7 +81,6 @@
     display: block;
     position: relative;
     min-width: 3.25em;
-    margin: 0 10px;
 }
 .soon-wrapper[data-visual]
     > .soon-group
@@ -126,8 +125,7 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    /* font-size: 1em; */
-    font-size: 16.52px;
+    font-size: 1em;
     color: #2f3333;
 }
 .soon-wrapper[data-visual] .soon-label,
@@ -179,8 +177,7 @@
 }
 .soon-wrapper[data-layout*="label-small"][data-visual] .soon-label,
 .soon[data-layout*="label-small"][data-visual] .soon-label {
-    /* font-size: 0.275em !important; */
-    font-size: 16.52px !important;
+    font-size: 0.275em !important;
 }
 .soon-wrapper[data-layout*="label-small"][data-layout*="line"] .soon-label,
 .soon[data-layout*="label-small"][data-layout*="line"] .soon-label {

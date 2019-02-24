@@ -370,3 +370,54 @@ body {
     font-size: 14.58px;
     color: #7b7b7b;
 }
+
+/* 
+Countdown begin #################################################################
+*/
+
+#my-soon-counter .soon-reflection {
+    background-color: #ffffff;
+    background-image: linear-gradient(#ffffff 25%, rgba(255, 255, 255, 0));
+}
+
+#my-soon-counter .soon-label {
+    color: #7b7b7b;
+    font-size: 16.52px !important;
+    top: 63%;
+}
+
+#my-soon-counter .soon-ring-progress {
+    background-color: #e8e8e8;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.soon[data-visual]
+    > .soon-group
+    > .soon-group-inner
+    > .soon-group-sub
+    > .soon-group-inner {
+    min-width: 86px;
+    min-height: 86px;
+    margin-right: 15px;
+}
+
+.soon[data-layout*="line"] {
+    padding: 28px 0;
+}
+
+.soon .soon-group {
+    margin-left: 30px;
+}
+
+.soon[data-visual] .soon-value {
+    font-size: 16.52px;
+}
+
+.soon[data-visual*="ring"]:not([data-layout*="label-hidden"]) .soon-value {
+    top: 35%;
+}
+
+/* 
+Countdown end #################################################################
+*/
