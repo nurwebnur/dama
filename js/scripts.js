@@ -1,5 +1,5 @@
-$(function() {
-    $(".main_slider").each(function() {
+$(function () {
+    $(".main_slider").each(function () {
         var $li = $("li", this);
         var $prev = $(".prev", this);
         var $next = $(".next", this);
@@ -11,7 +11,7 @@ $(function() {
         $count.text($li.length);
         $current.text($li.filter(".active").index() + 1);
 
-        $li.each(function() {
+        $li.each(function () {
             $pags.append("<span></span>");
         });
 
@@ -19,7 +19,7 @@ $(function() {
 
         $pag.eq($li.filter(".active").index()).addClass("active");
 
-        $prev.click(function() {
+        $prev.click(function () {
             var index = $li.filter(".active").index();
 
             if (index == 0) {
@@ -37,7 +37,7 @@ $(function() {
             $current.text(index);
         });
 
-        $next.click(function() {
+        $next.click(function () {
             var index = $li.filter(".active").index();
 
             if (index == $li.length - 1) {
@@ -55,7 +55,7 @@ $(function() {
             $current.text(index + 2);
         });
 
-        $pag.click(function() {
+        $pag.click(function () {
             $li.eq($(this).index())
                 .addClass("active")
                 .siblings()
@@ -67,4 +67,14 @@ $(function() {
             $current.text($li.filter(".active").index() + 1);
         });
     });
+
+    $(".popular_gallery").each(function () {
+        var $prevImg = $(".popular_gallery_prev span", this);
+        var $mainImg = $(".popular_gallery_main img", this);
+
+        $prevImg.click(function () {
+            $mainImg.eq($(this).index()).addClass("active").siblings().removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+    })
 });
