@@ -77,4 +77,17 @@ $(function () {
             $(this).addClass("active").siblings().removeClass("active");
         })
     })
+
+    $(".popular").each(function () {
+        var $tabBlock = $(".popular_all_tabs_block ul", this);
+        var $tabBtn = $(".popular_tab_btns a", this);
+
+        $tabBtn.eq(0).addClass("active");
+        $tabBlock.eq(0).addClass("active");
+
+        $tabBtn.click(function () {
+            $tabBlock.eq($(this).index()).addClass("active").siblings().removeClass("active");
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+    })
 });
