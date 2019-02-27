@@ -1,5 +1,5 @@
-$(function () {
-    $(".main_slider").each(function () {
+$(function() {
+    $(".main_slider").each(function() {
         var $li = $("li", this);
         var $prev = $(".prev", this);
         var $next = $(".next", this);
@@ -11,7 +11,7 @@ $(function () {
         $count.text($li.length);
         $current.text($li.filter(".active").index() + 1);
 
-        $li.each(function () {
+        $li.each(function() {
             $pags.append("<span></span>");
         });
 
@@ -19,7 +19,7 @@ $(function () {
 
         $pag.eq($li.filter(".active").index()).addClass("active");
 
-        $prev.click(function () {
+        $prev.click(function() {
             var index = $li.filter(".active").index();
 
             if (index == 0) {
@@ -37,7 +37,7 @@ $(function () {
             $current.text(index);
         });
 
-        $next.click(function () {
+        $next.click(function() {
             var index = $li.filter(".active").index();
 
             if (index == $li.length - 1) {
@@ -55,7 +55,7 @@ $(function () {
             $current.text(index + 2);
         });
 
-        $pag.click(function () {
+        $pag.click(function() {
             $li.eq($(this).index())
                 .addClass("active")
                 .siblings()
@@ -68,26 +68,97 @@ $(function () {
         });
     });
 
-    $(".popular_gallery").each(function () {
+    $(".popular_gallery").each(function() {
         var $prevImg = $(".popular_gallery_prev span", this);
         var $mainImg = $(".popular_gallery_main img", this);
 
-        $prevImg.click(function () {
-            $mainImg.eq($(this).index()).addClass("active").siblings().removeClass("active");
-            $(this).addClass("active").siblings().removeClass("active");
-        })
-    })
+        $prevImg
+            .click(function() {
+                $mainImg
+                    .eq($(this).index())
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+            })
+            .eq(0)
+            .click();
+    });
 
-    $(".popular").each(function () {
+    $(".popular").each(function() {
         var $tabBlock = $(".popular_all_tabs_block ul", this);
         var $tabBtn = $(".popular_tab_btns a", this);
 
-        $tabBtn.eq(0).addClass("active");
-        $tabBlock.eq(0).addClass("active");
+        $tabBtn
+            .click(function() {
+                $tabBlock
+                    .eq($(this).index())
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+            })
+            .eq(0)
+            .click();
+    });
 
-        $tabBtn.click(function () {
-            $tabBlock.eq($(this).index()).addClass("active").siblings().removeClass("active");
-            $(this).addClass("active").siblings().removeClass("active");
-        })
-    })
+    $(".black_section_carousel li").each(function() {
+        var $prevImg = $(".black_section_carousel_previmg span", this);
+        var $mainImg = $(".black_section_carousel_mainimg img", this);
+
+        $prevImg
+            .click(function() {
+                $mainImg
+                    .eq($(this).index())
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active");
+            })
+            .eq(0)
+            .click();
+    });
+
+    $(".black_section_carousel").each(function() {
+        var $li = $("li", this);
+        var $prev = $(".prev", this);
+        var $next = $(".next", this);
+
+        $li.eq(0).addClass("active");
+
+        $prev.click(function() {
+            var index = $li.filter(".active").index();
+
+            if (index == 0) {
+                index = $li.length;
+            }
+
+            $li.eq(index - 1)
+                .addClass("active")
+                .siblings()
+                .removeClass("active");
+        });
+
+        $next.click(function() {
+            var index = $li.filter(".active").index();
+
+            if (index == $li.length - 1) {
+                index = -1;
+            }
+
+            $li.eq(index + 1)
+                .addClass("active")
+                .siblings()
+                .removeClass("active");
+        });
+    });
 });

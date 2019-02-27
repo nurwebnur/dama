@@ -540,7 +540,7 @@ Social end #################################################################
 .popular {
     background-color: #f5f5f5;
     padding-top: 93px;
-    padding-bottom: 136px;
+    padding-bottom: 130px;
 }
 
 .popular_tab_btns {
@@ -579,37 +579,37 @@ Social end #################################################################
 
 .popular_all_tabs_block ul.active li:nth-child(1) {
     opacity: 1;
-    transition: .2s .1s opacity, .4s box-shadow;
+    transition: 0.2s 0.1s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul.active li:nth-child(2) {
     opacity: 1;
-    transition: .2s .2s opacity, .4s box-shadow;
+    transition: 0.2s 0.2s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul.active li:nth-child(3) {
     opacity: 1;
-    transition: .2s .3s opacity, .4s box-shadow;
+    transition: 0.2s 0.3s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul.active li:nth-child(4) {
     opacity: 1;
-    transition: .2s .7s opacity, .4s box-shadow;
+    transition: 0.2s 0.7s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul.active li:nth-child(5) {
     opacity: 1;
-    transition: .2s .6s opacity, .4s box-shadow;
+    transition: 0.2s 0.6s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul.active li:nth-child(6) {
     opacity: 1;
-    transition: .2s .5s opacity, .4s box-shadow;
+    transition: 0.2s 0.5s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul.active li:nth-child(7) {
     opacity: 1;
-    transition: .2s .4s opacity, .4s box-shadow;
+    transition: 0.2s 0.4s opacity, 0.4s box-shadow;
 }
 
 .popular_all_tabs_block ul li {
@@ -618,7 +618,7 @@ Social end #################################################################
     border: 1px solid #f1f1f1;
     padding: 25px 25px 30px;
     cursor: pointer;
-    transition: .4s;
+    transition: 0.4s;
     position: relative;
     opacity: 0;
 }
@@ -653,7 +653,7 @@ Social end #################################################################
 
 .popular_gallery_main img.active {
     transform: scale(1);
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .popular_gallery_prev {
@@ -762,10 +762,180 @@ Social end #################################################################
     color: #7b7b7b;
 }
 
+.black_section {
+    height: 592px;
+    background: #1b1b1b;
+    margin-bottom: 136px;
+}
 
+.black_section .center {
+    height: 592px;
+}
 
+.black_section_circle {
+    width: 894px;
+    height: 592px;
+    position: absolute;
+    left: -257px;
+    top: 0;
+    overflow: hidden;
+}
 
+.black_section_circle::before {
+    content: "";
+    width: 894px;
+    height: 894px;
+    position: absolute;
+    left: 0;
+    top: -162px;
+    right: 0;
+    bottom: 0;
+    background: repeating-radial-gradient(
+        #282828,
+        #282828 200px,
+        #1b1b1b 200px,
+        #1b1b1b 320px
+    );
+    border-radius: 50%;
+}
 
+.black_section_carousel {
+    width: 474px;
+    height: 592px;
+}
 
+.black_section_carousel ul li {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
+.black_section_carousel ul li.active .black_section_carousel_mainimg {
+    opacity: 1;
+}
 
+.black_section_carousel_mainimg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.black_section_carousel_mainimg img {
+    position: absolute;
+    top: 0;
+    right: 90px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: scale(0);
+}
+
+.black_section_carousel_mainimg img.active {
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+.black_section_carousel_previmg {
+    width: 70px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.black_section_carousel_previmg span {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.black_section_carousel_previmg span.active {
+    border-color: #f4c515;
+}
+
+.black_section_carousel_previmg span img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 40px;
+}
+
+.black_section_carousel button {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    left: 148px;
+    border: 0;
+    box-shadow: 0 0 13px rgba(2, 2, 2, 0.2);
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.black_section_carousel button:hover {
+    background: #f5c617;
+    box-shadow: 0 0 0 10px rgba(245, 198, 23, 0.3);
+}
+
+.black_section_carousel button.prev {
+    top: -36px;
+}
+
+.black_section_carousel button.prev::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-top: 1px solid #252525;
+    border-left: 1px solid #252525;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 8px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.black_section_carousel button.next {
+    bottom: -36px;
+}
+
+.black_section_carousel button.next::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-bottom: 1px solid #252525;
+    border-right: 1px solid #252525;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 8px;
+    left: 0;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.black_section_carousel button:hover::after {
+    border-color: #fff;
+}
