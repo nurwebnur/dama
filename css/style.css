@@ -437,7 +437,7 @@ Social begin #################################################################
     vertical-align: top;
     width: 36px;
     height: 36px;
-    margin: 0 5px 7px;
+    margin: 0 9px 7px 0px;
     background-color: #2f5391;
     border-radius: 50%;
     position: relative;
@@ -802,6 +802,7 @@ Social end #################################################################
 .black_section_carousel {
     width: 474px;
     height: 592px;
+    float: left;
 }
 
 .black_section_carousel ul li {
@@ -814,6 +815,38 @@ Social end #################################################################
 
 .black_section_carousel ul li.active .black_section_carousel_mainimg {
     opacity: 1;
+    transition: 1s;
+}
+
+.black_section_carousel
+    ul
+    li.active
+    .black_section_carousel_previmg
+    span:nth-child(1) {
+    transform: scale(1);
+    transition: 0.4s;
+}
+
+.black_section_carousel
+    ul
+    li.active
+    .black_section_carousel_previmg
+    span:nth-child(2) {
+    transform: scale(1);
+    transition: 0.4s 0.2s;
+}
+
+.black_section_carousel
+    ul
+    li.active
+    .black_section_carousel_previmg
+    span:nth-child(3) {
+    transform: scale(1);
+    transition: 0.4s 0.4s;
+}
+
+.black_section_carousel ul li.active {
+    z-index: 1;
 }
 
 .black_section_carousel_mainimg {
@@ -861,6 +894,8 @@ Social end #################################################################
     position: relative;
     cursor: pointer;
     border: 3px solid transparent;
+    transform: scale(0);
+    transition: 0.4s;
 }
 
 .black_section_carousel_previmg span.active {
@@ -938,4 +973,63 @@ Social end #################################################################
 
 .black_section_carousel button:hover::after {
     border-color: #fff;
+}
+
+.black_section_right {
+    overflow: hidden;
+    padding: 83px 0 0 125px;
+}
+
+.black_section_right h2 {
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.black_section_right p {
+    color: #909090;
+    font-size: 20.83px;
+    line-height: 43.46px;
+}
+
+.black_section_right ul {
+    margin: 14px 0 28px;
+    list-style: none;
+}
+
+.black_section_right ul li {
+    color: #909090;
+    font-size: 16.67px;
+    line-height: 37.46px;
+    margin-left: 14px;
+    position: relative;
+}
+
+.black_section_right ul li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 16px;
+    left: -16px;
+}
+
+.black_section_right .price {
+    font-size: 20.83px;
+    color: #909090;
+    text-transform: uppercase;
+}
+
+.black_section_right .price span {
+    color: #fff;
+}
+
+.black_section_right .price ins {
+    color: #f4c515;
+}
+
+.black_section_right .soc {
+    text-align-last: left;
+    margin-top: 35px;
 }
