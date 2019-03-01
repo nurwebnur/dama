@@ -44,6 +44,25 @@ h6 {
     background-color: #f4c515;
 }
 
+.h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.h3 span {
+    color: #f4c515;
+}
+
+.h3::before {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    vertical-align: top;
+    margin: 15px 10px 0 0;
+    background-color: #f4c515;
+}
+
 label {
     cursor: pointer;
 }
@@ -765,7 +784,6 @@ Social end #################################################################
 .black_section {
     height: 592px;
     background: #1b1b1b;
-    margin-bottom: 136px;
 }
 
 .black_section .center {
@@ -1032,4 +1050,102 @@ Social end #################################################################
 .black_section_right .soc {
     text-align-last: left;
     margin-top: 35px;
+}
+
+.multi .center {
+    display: flex;
+    justify-content: space-between;
+}
+
+.multi {
+    padding: 128px 0;
+}
+
+.multi ul {
+    margin-top: 54px;
+}
+
+.multi ul li {
+    display: flex;
+    height: 206px;
+}
+
+.multi ul li:hover {
+    box-shadow: 0 0 40px rgba(2, 2, 2, 0.9);
+}
+
+.multi ul li:hover .multi_category,
+.multi ul li:hover .multi_title,
+.multi ul li:hover .multi_text .price {
+    transform: translateY(-20px);
+    transition: 0.4s;
+}
+
+.multi ul li:hover .multi_text .soc a:nth-child(1) {
+    transform: scale(1);
+    transition: 0.1s;
+}
+
+.multi ul li:hover .multi_text .soc a:nth-child(2) {
+    transform: scale(1);
+    transition: 0.3s;
+}
+
+.multi ul li:hover .multi_text .soc a:nth-child(3) {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.multi_block {
+    width: 370px;
+}
+
+.multi_img {
+    width: 150px;
+    /* text-align: center; */
+}
+
+.multi_img img {
+    /* display: block; */
+    /* margin: 10px auto; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.multi_text {
+    margin-top: 34px;
+    width: 220px;
+}
+
+.multi_category {
+    font-size: 14.58px;
+    color: #1a65b8;
+}
+
+.multi_title {
+    font-size: 16.67px;
+    line-height: 22.92px;
+    color: #2b3132;
+    margin-top: 4px;
+}
+
+.multi_text .price {
+    font-size: 16.67px;
+    color: #6f6f6f;
+    text-transform: uppercase;
+    margin-top: 23px;
+}
+
+.multi_text .price span {
+    color: #f4c515;
+}
+
+.multi_text .soc {
+    text-align-last: left;
+}
+
+.multi_text .soc a {
+    transform: scale(0);
 }
