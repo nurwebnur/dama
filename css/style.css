@@ -126,6 +126,11 @@ body {
 .header {
     background: #141414;
     padding: 15px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .header .center {
@@ -151,7 +156,7 @@ body {
 }
 
 .main_slider {
-    margin-top: 128px;
+    margin-top: 190px;
     margin-bottom: 65px;
 }
 
@@ -485,9 +490,9 @@ Social end #################################################################
     padding-bottom: 85px;
 }
 
-.sale_block_right {
-    /* overflow: hidden; */
-}
+/* .sale_block_right {
+    overflow: hidden;
+} */
 
 .sale_block_right ul {
     display: flex;
