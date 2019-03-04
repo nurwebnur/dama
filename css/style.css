@@ -1185,6 +1185,20 @@ Social end #################################################################
     align-items: center;
 }
 
+.popup_img {
+    width: 200px;
+    height: 100%;
+    position: relative;
+}
+
+.popup_img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 130px;
+}
+
 .popup_category {
     font-size: 14.58px;
     color: #1a65b8;
@@ -1193,6 +1207,7 @@ Social end #################################################################
 .popup_goods_title {
     font-size: 16.67px;
     line-height: 22.92px;
+    text-transform: capitalize;
     color: #2b3132;
     margin-top: 4px;
 }

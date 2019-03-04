@@ -170,6 +170,13 @@ $(function() {
     });
 
     $(".open_popup").click(function() {
+        $(".popup .popup_title").text($(this).data("title"));
+        $(".popup .popup_category").text($(this).data("category"));
+        $(".popup .popup_goods_title").text($(this).data("desc"));
+        // $(".popup .popup_desc").text($(this).data("desc"));
+        $(".popup .price span").text($(this).data("price"));
+        $(".popup .popup_img img").attr("src", $(this).data("img"));
+
         $(".bg_popup").fadeIn();
         $(".popup").fadeIn();
 
