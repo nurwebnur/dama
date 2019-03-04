@@ -168,4 +168,16 @@ $(function() {
         $("html, body").animate({ scrollTop: coordinats }, 1000);
         return false;
     });
+
+    $(".open_popup").click(function() {
+        $(".bg_popup").fadeIn();
+        $(".popup").fadeIn();
+
+        $(".bg_popup, .close").click(function() {
+            $(".bg_popup").fadeOut();
+            $(".popup").fadeOut();
+        });
+
+        return false;
+    });
 });
