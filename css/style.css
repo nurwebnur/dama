@@ -1197,6 +1197,10 @@ Social end #################################################################
     margin-top: 4px;
 }
 
+.popup_text {
+    padding-right: 70px;
+}
+
 .popup_text .price {
     font-size: 16.67px;
     color: #6f6f6f;
@@ -1210,6 +1214,7 @@ Social end #################################################################
 
 .popup form {
     margin-top: 24px;
+    position: relative;
 }
 
 .popup form input[type="text"] {
